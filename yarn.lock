@@ -4884,6 +4884,7 @@ __metadata:
     react-redux: "npm:^9.2.0"
     redux: "npm:^5.0.1"
     redux-devtools-extension: "npm:^2.13.9"
+    rimraf: "npm:^5.0.5"
     tailwindcss: "npm:3.3.3"
     typescript: "npm:^5.6.2"
     typescript-eslint: "npm:^8.18.2"

@@ -5,8 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
+    "predeploy": "yarn run build && rimraf dist/.git",
+    "deploy": "gh-pages -d dist -b gh-pages --dotfiles",
+    "postbuild": "echo \"These are built files\" > dist/.nojekyll",
+    "preview": "vite preview",
+    "clean": "rimraf dist node_modules"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
@@ -31,6 +34,7 @@
     "globals": "^15.14.0",
     "live-server": "^1.2.2",
     "postcss": "8.4.6",
+    "rimraf": "^5.0.5",
     "tailwindcss": "3.3.3",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.18.2",
